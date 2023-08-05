@@ -45,7 +45,7 @@ def token_required(request):
             }, 500
 
 
-def bad_auth(request):
+def auth(request):
   access = token_required(request)
   if access:
     if access[0]['error'] is not None:
